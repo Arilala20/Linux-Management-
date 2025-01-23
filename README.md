@@ -18,6 +18,6 @@ I created a new repository named "Linux Management" for the assignment.
 Then I linked my HAMK email as a secondary mail for version control.
 
 
-# final output
+# Final output
 "C:\Users\mayee\OneDrive\Documents\Linux image\pic 1.png"
 
