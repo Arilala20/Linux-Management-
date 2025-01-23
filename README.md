@@ -19,5 +19,5 @@ Then I linked my HAMK email as a secondary mail for version control.
 
 
 # final output
-"C:\Users\mayee\OneDrive\Documents\Linux image\pic 1.png"
+![alt text](<pic 1.png>)
 
