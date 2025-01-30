@@ -94,7 +94,12 @@ Step 5: Ensure New Files Inherit Group Ownership
     sudo chmod g+s /opt/projekti
 This ensures that new files in /opt/projekti inherit the projekti group.
 
+This ensures that new files in /opt/projekti inherit the projekti group.
+
 Verification Check user groups:
 
  groups tupu
  groups lupu
+Check directory permissions:
+
+    ls -ld /opt/projekti
