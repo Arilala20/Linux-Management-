@@ -106,4 +106,9 @@ Check directory permissions:
 
 # Output
     drwxrws--- 2 root projekti 4096 Jan 30 18:37 /opt/projekti
-# Screenshot
+# Screenshots
+
+![Screenshot 2025-01-30 225338](https://github.com/user-attachments/assets/a8e7fccc-f993-40a2-a95e-21d04d2084fc)
+![Screenshot 2025-01-30 225401](https://github.com/user-attachments/assets/432d7c13-7811-4ef4-9c89-ec86a37dcd0d)
+![Screenshot 2025-01-30 225544](https://github.com/user-attachments/assets/9e64c6a9-e91e-42d8-bc36-d5486aa5bbe8)
+
