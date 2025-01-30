@@ -103,3 +103,7 @@ Verification Check user groups:
 Check directory permissions:
 
     ls -ld /opt/projekti
+
+# Output
+    drwxrws--- 2 root projekti 4096 Jan 30 18:37 /opt/projekti
+# Screenshot
