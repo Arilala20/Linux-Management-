@@ -117,35 +117,31 @@ Check directory permissions:
 
 
 
-Introduction
+#Introduction
 This report documents my step-by-step execution of APT (Advanced Package Tool) commands for package management in Ubuntu. It covers system updates, installing packages, removing packages, managing repositories, and troubleshooting.
 
 All commands, outputs, and explanations are included.
 
-🔹 Part 1: Understanding APT & System Updates
-1️⃣ Check APT Version
-🔹 Command:
-
-bash
-Copy
-Edit
+Part 1: Understanding APT & System Updates
+1. Check APT Version
 apt --version
-🔹 Output:
+Output: (apt --version apt 2.4.10 (amd64))
 
-scss
-Copy
-Edit
-apt 2.4.10 (amd64)
-✅ Explanation: This confirms the installed APT version on the system.
-
-2️⃣ Update the Package List
-🔹 Command:
-
-bash
-Copy
-Edit
+2. Update the Package List
 sudo apt update
-🔹 Output: APT fetches the latest package lists from repositories.
+Explanation: This command fetches the latest package lists from configured repositories, ensuring we get the latest versions and security updates.
+
+3. Upgrade Installed Packages
+sudo apt upgrade -y
+Difference between update and upgrade:
+
+update: Refreshes the package list but doesn’t install updates.
+upgrade: Installs the latest versions of all packages listed in the updated package list.
+4. View Pending Updates
+apt list --upgradable
+
+
+
 
 ✅ Why is this important?
 Updating ensures that APT has the latest list of available package versions.
