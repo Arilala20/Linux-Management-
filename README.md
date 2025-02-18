@@ -116,15 +116,15 @@ Check directory permissions:
 
 
 
-# APT & System Management Report
-## Part 1: Understanding APT & System Updates (15 min)
-### 1.1 Check Your System’s APT Version
+# APT & System Management Assignment
+## Part 1: Understanding APT & System Updates 
+### 1.1 Checking System’s APT Version
 To check the version of APT installed on my system, I ran the following command:
 
 ``` bash
 Copy
 Edit
-apt --version
+apt --version ```
 Output:
 
 scss
