@@ -298,8 +298,8 @@ E: Unable to locate package fakepackage
 Troubleshooting:
 
   * The error indicates that the package does not exist in the repositories. To resolve this, I would verify the package name or check if the repository containing the package needs to be added.
-
-    ![Alt text]("C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-18 004023.png")
+![Screenshot 2025-02-18 004023](https://github.com/user-attachments/assets/11e9421a-e77e-4aab-81d8-a6928970cc1d)
+  
 
 # Bonus Challenge (Optional): Holding and Unholding a Package
 
@@ -313,11 +313,11 @@ sudo apt-mark hold gimp
 ### 5.2 Unhold a Package
 To allow the package to be upgraded again, I ran:
 
+
 ```bash
 sudo apt-mark unhold gimp
 ```
 Why Would You Want to Hold a Package?
    * To prevent a specific package from being updated due to compatibility or stability reasons.
 
-![Alt text](path/to/image)
-"C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-18 004447.png"
+![Screenshot 2025-02-18 004447](https://github.com/user-attachments/assets/655d5ff1-59d3-4fd2-be8a-b6fd332915f3)
