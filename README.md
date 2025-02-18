@@ -121,206 +121,200 @@ Check directory permissions:
 ### 1.1 Checking System’s APT Version
 To check the version of APT installed on my system, I ran the following command:
 
-```bash```
-apt --version 
-### Output :
+```bash
+apt --version
+```
+## Output :
 
-
-scss
-Copy
-Edit
+```bash
 apt 2.4.7 (amd64)
-1.2 Update the Package List
+```
+
+### 1.2 Update the Package List
 Next, I updated the package list with the following command:
 
-bash
-Copy
-Edit
+```bash
 sudo apt update
-Explanation: This step is important because it fetches the latest list of available packages and their versions from the repositories. Without updating the package list, you may not get the most recent package versions or security patches when installing or upgrading software.
+```
 
-1.3 Upgrade Installed Packages
+
+### 1.3 Upgrade Installed Packages
 To upgrade installed packages, I ran the command:
 
-bash
-Copy
-Edit
+```bash
 sudo apt upgrade -y
-Difference Between Update and Upgrade:
+```
+* Difference Between Update and Upgrade:
 
-apt update refreshes the package lists from the repositories, making sure your system knows about the latest available versions of the packages.
-apt upgrade installs the latest versions of the packages that are already installed on your system. It doesn't remove any packages, but may install new ones if required to satisfy dependencies.
-1.4 View Pending Updates
+   * apt update refreshes the package lists from the repositories, making sure your system knows about the latest available versions of the packages.
+   * apt upgrade installs the latest versions of the packages that are already installed on your system. It doesn't remove any packages, but may install new ones if required to satisfy dependencies.
+     
+### 1.4 View Pending Updates
 To check for pending updates, I used the command:
 
-bash
-Copy
-Edit
+```bash
 apt list --upgradable
+```
+### 1.4 Pending Updates :
+
+To check for pending updates, I used the command:
+
+```bash
+apt list --upgradable
+```
 Pending Updates (if any):
 
-No updates pending (or list would appear here if there were any).
-Part 2: Installing & Managing Packages (20 min)
-2.1 Search for a Package Using APT
+  * No updates pending (or list would appear here if there were any).
+
+## Part 2: Installing & Managing Packages 
+### 2.1 Search for a Package Using APT
 To find an image editor, I searched for the package using:
 
-bash
-Copy
-Edit
-apt search image editor
-Output:
+Pending Updates (if any):
 
-nginx
-Copy
-Edit
+```bash
+apt search image editor
+```
+# Output:
+
+```nginx
+
 The following packages were automatically installed and are no longer required:
   ...
+```
 Selected Package: I chose the package gimp from the list of available image editors.
 
-2.2 View Package Details
+### 2.2 View Package Details
 To get detailed information about the gimp package, I ran:
 
-bash
-Copy
-Edit
+```bash
 apt show gimp
-Output:
+```
+# Output:
 
-makefile
-Copy
-Edit
+```makefile
+
 Package: gimp
 Version: 2.10.28-1
 Architecture: amd64
 Dependencies: ...
 Description: GNU Image Manipulation Program
 ...
+```
 Dependencies:
 
-gimp requires several libraries and dependencies, such as libgimp2.0 and libgtk-3-0.
-2.3 Install the Package
+ * gimp requires several libraries and dependencies, such as libgimp2.0 and libgtk-3-0.
+   
+### 2.3 Install the Package
 To install the gimp package, I ran:
 
-bash
-Copy
-Edit
+```bash
 sudo apt install gimp -y
+```
 Confirmation: The package installed successfully without any issues.
 
-2.4 Check Installed Package Version
+### 2.4 Check Installed Package Version
 To confirm the version of gimp installed, I ran:
 
-bash
-Copy
-Edit
+```bash
 apt list --installed | grep gimp
-Output:
+```
+# Output:
 
-bash
-Copy
-Edit
+```bash
 gimp/unknown,now 2.10.28-1 amd64 [installed]
-Installed Version:
+```
 
-Version 2.10.28-1 was installed.
-Part 3: Removing & Cleaning Packages (10 min)
-3.1 Uninstall the Package
+Installed Version:
+ * Version 2.10.28-1 was installed.
+
+## Part 3: Removing & Cleaning Packages 
+### 3.1 Uninstall the Package
 To remove the gimp package, I ran:
 
-bash
-Copy
-Edit
+```bash
 sudo apt remove gimp -y
-Output: The package was removed successfully, but some configuration files may remain.
+```
+# Output: The package was removed successfully, but some configuration files may remain.
 
 Is the Package Fully Removed? No, the package was removed, but configuration files were not deleted.
 
-3.2 Remove Configuration Files as Well
+### 3.2 Remove Configuration Files as Well
 To completely remove the package, including configuration files, I ran:
 
-bash
-Copy
-Edit
+```bash
 sudo apt purge gimp -y
+```
 Difference Between Remove and Purge:
 
 remove only deletes the package itself but leaves configuration files.
 purge deletes the package and its configuration files, making it as if the package was never installed.
-3.3 Clear Unnecessary Package Dependencies
+
+### 3.3 Clear Unnecessary Package Dependencies
 To remove unnecessary dependencies, I ran:
 
-bash
-Copy
-Edit
+```bash
 sudo apt autoremove -y
-Explanation: This step is important because it removes packages that were installed as dependencies but are no longer needed. It helps free up disk space and keeps the system clean.
+```
 
-3.4 Clean Up Downloaded Package Files
+### 3.4 Clean Up Downloaded Package Files
 To clean up the package cache, I ran:
 
-bash
-Copy
-Edit
+```bash
 sudo apt clean
-Explanation: This command removes all downloaded package files from the local package cache (/var/cache/apt/archives/). This helps to free up space, especially when many packages have been installed and removed.
+```
 
-Part 4: Managing Repositories & Troubleshooting (15 min)
-4.1 List All APT Repositories
+## Part 4: Managing Repositories & Troubleshooting 
+### 4.1 List All APT Repositories
 To view all repositories configured on my system, I ran:
 
-bash
-Copy
-Edit
+```bash
 cat /etc/apt/sources.list
-What Do You Notice in This File?
+```
 
 The file contains a list of URLs that point to the repositories from which packages can be downloaded.
 The repositories include main, restricted, and universe components.
-4.2 Add a New Repository (Example: Universe Repository)
+### 4.2 Add a New Repository (Example: Universe Repository)
 To add the universe repository, I ran:
 
-bash
-Copy
-Edit
+```bash
 sudo add-apt-repository universe
 sudo apt update
+```
 Types of Packages in the Universe Repository:
 
-The universe repository contains community-maintained open-source packages. These packages may not be officially supported by Ubuntu but are freely available.
-4.3 Simulate an Installation Failure and Troubleshoot
+ * The universe repository contains community-maintained open-source packages. These packages may not be officially supported by Ubuntu but are freely available.
+### 4.3 Simulate an Installation Failure and Troubleshoot
 I attempted to install a non-existent package using:
 
-bash
-Copy
-Edit
+```bash
 sudo apt install fakepackage
+```
 Error Message:
 
-vbnet
-Copy
-Edit
+```vbnet
 E: Unable to locate package fakepackage
+```
 Troubleshooting:
 
-The error indicates that the package does not exist in the repositories. To resolve this, I would verify the package name or check if the repository containing the package needs to be added.
-Bonus Challenge (Optional): Holding and Unholding a Package
-5.1 Hold a Package
+  * The error indicates that the package does not exist in the repositories. To resolve this, I would verify the package name or check if the repository containing the package needs to be added.
+
+# Bonus Challenge (Optional): Holding and Unholding a Package
+
+### 5.1 Hold a Package
 To hold a package and prevent it from being upgraded, I ran:
 
-bash
-Copy
-Edit
+```bash
 sudo apt-mark hold gimp
-5.2 Unhold a Package
+```
+
+### 5.2 Unhold a Package
 To allow the package to be upgraded again, I ran:
 
-bash
-Copy
-Edit
+```bash
 sudo apt-mark unhold gimp
+```
 Why Would You Want to Hold a Package?
-
-You may want to hold a package to prevent it from being updated to a version that may cause issues with your system or application compatibility.
-
+   * To prevent a specific package from being updated due to compatibility or stability reasons.
 
 
