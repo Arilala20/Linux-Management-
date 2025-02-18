@@ -121,10 +121,10 @@ Check directory permissions:
 ### 1.1 Checking System’s APT Version
 To check the version of APT installed on my system, I ran the following command:
 
-``` bash
+```bash
 Copy
 Edit
-apt --version ```
+apt --version 
 Output:
 
 scss
