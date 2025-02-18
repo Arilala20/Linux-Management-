@@ -175,7 +175,7 @@ Pending Updates (if any):
 ```bash
 apt search image editor
 ```
-# Output:
+## Output:
 
 ```nginx
 
@@ -190,7 +190,7 @@ To get detailed information about the gimp package, I ran:
 ```bash
 apt show gimp
 ```
-# Output:
+## Output:
 
 ```makefile
 
@@ -219,7 +219,7 @@ To confirm the version of gimp installed, I ran:
 ```bash
 apt list --installed | grep gimp
 ```
-# Output:
+## Output:
 
 ```bash
 gimp/unknown,now 2.10.28-1 amd64 [installed]
@@ -235,7 +235,7 @@ To remove the gimp package, I ran:
 ```bash
 sudo apt remove gimp -y
 ```
-# Output: The package was removed successfully, but some configuration files may remain.
+## Output: The package was removed successfully, but some configuration files may remain.
 
 Is the Package Fully Removed? No, the package was removed, but configuration files were not deleted.
 
