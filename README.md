@@ -299,8 +299,7 @@ Troubleshooting:
 
   * The error indicates that the package does not exist in the repositories. To resolve this, I would verify the package name or check if the repository containing the package needs to be added.
 
-    ![Alt text](path/to/image)
-"C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-18 004023.png"
+    ![Alt text]("C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-18 004023.png")
 
 # Bonus Challenge (Optional): Holding and Unholding a Package
 
