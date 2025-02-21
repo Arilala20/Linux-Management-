@@ -370,8 +370,11 @@ users:
 ```
 # Screenshot
 
-![Alt Text]("C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-20 002007.png")
-![Alt Text]("C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-20 002414.png")
+![](![Screenshot 2025-02-20 002007](https://github.com/user-attachments/assets/8619e0df-5322-45c4-b58e-dba5931dce94)
+
+
+![](![Screenshot 2025-02-20 002414](https://github.com/user-attachments/assets/0e1f461b-4974-4b93-bcad-d93136cfcca1)
+
 
  Launching a Multipass VM with Cloud-Init
 ```bash
@@ -404,7 +407,8 @@ lxc delete my-container
 
 # Screenshot
 
-![Alt Text]("C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-20 004439.png")
+![](![Screenshot 2025-02-20 004439](https://github.com/user-attachments/assets/c37fb3d8-17e8-4280-9724-00affe5c4d46)
+
 
 ### Part 4: Working with Docker
 # Installing Docker
@@ -428,7 +432,8 @@ CMD ["nginx", "-g", "daemon off;"]
 
 # Screenshot
 
-![Alt Text]("C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-20 005107.png")
+![alt text](![Screenshot 2025-02-20 005107](https://github.com/user-attachments/assets/5448cd20-545f-4117-b089-519b5429e2cb)
+)
 
 ### Part 5: Working with Snaps
 
