@@ -452,7 +452,9 @@ apps:
 ```
 
 # Screenshot
-!["C:\Users\mayee\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-20 005122.png"](./your-image.png)
+
+![![Screenshot 2025-02-20 005122](https://github.com/user-attachments/assets/dd13231f-6456-4753-9a94-df2103ef386f)
+](https://github.com/user-attachments/assets/655d5ff1-59d3-4fd2-be8a-b6fd332915f3)
 
 
 
