@@ -339,24 +339,24 @@ Full Virtualization (VMs): Uses a hypervisor to emulate hardware and run multipl
 Container-Based Virtualization: Uses OS-level isolation to run multiple applications in isolated user spaces.
 
 ### Part 2: Working with Multipass
-Installing Multipass
+## Installing Multipass
 ```bash
 sudo snap install multipass
 ```
-Basic Multipass Commands
-Launching a Default Ubuntu Instance
+## Basic Multipass Commands
+## Launching a Default Ubuntu Instance
 ```bash
 multipass launch --name test-vm
 ```
-Listing Instances
+## Listing Instances
 ```bash
 multipass list
 ```
-Accessing the Instance Shell
+## Accessing the Instance Shell
 ```bash
 multipass shell test-vm
 ```
-Cloud-init Configuration
+## Cloud-init Configuration
 Created a cloud-init.yaml file:
 ```bash
 #cloud-config
@@ -376,11 +376,11 @@ users:
 ![](![Screenshot 2025-02-20 002414](https://github.com/user-attachments/assets/0e1f461b-4974-4b93-bcad-d93136cfcca1)
 
 
- Launching a Multipass VM with Cloud-Init
+## Launching a Multipass VM with Cloud-Init
 ```bash
 multipass launch --name my-cloud-vm --cloud-init cloud-init.yaml
 ```
-Verifying Nginx Installation
+## Verifying Nginx Installation
 
 ```bash
 multipass shell my-cloud-vm
@@ -389,13 +389,13 @@ systemctl status nginx
 
 ### Part 3: Exploring LXD
 
-Installing and Initializing LXD
+## Installing and Initializing LXD
 
 ```bash
 sudo apt update
 sudo apt install -y lxd
 ```
-Creating container
+## Creating container
 
 ```bash
 lxc launch ubuntu:20.04 my-container
