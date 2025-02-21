@@ -321,3 +321,93 @@ Why Would You Want to Hold a Package?
    * To prevent a specific package from being updated due to compatibility or stability reasons.
 
 ![Screenshot 2025-02-18 004447](https://github.com/user-attachments/assets/655d5ff1-59d3-4fd2-be8a-b6fd332915f3)
+
+
+
+
+
+Linux Virtualization Exercise
+Introduction
+This report documents the steps taken to complete the Linux Virtualization exercise on an Ubuntu 24.04 system with nested virtualization enabled. It covers Multipass, LXD, Docker, and Snapcraft.
+
+Part 1: Virtualization Concepts
+Research on Virtualization Concepts
+Virtualization enables running multiple operating systems or applications on the same physical machine using a hypervisor. There are two main types of virtualization:
+
+Full Virtualization (VMs): Uses a hypervisor to emulate hardware and run multiple OS instances.
+
+Container-Based Virtualization: Uses OS-level isolation to run multiple applications in isolated user spaces.
+
+Part 2: Working with Multipass
+Installing Multipass
+sudo snap install multipass
+Basic Multipass Commands
+Launching a Default Ubuntu Instance
+multipass launch --name test-vm
+Listing Instances
+multipass list
+Accessing the Instance Shell
+multipass shell test-vm
+Cloud-init Configuration
+Created a cloud-init.yaml file:
+#cloud-config
+package_update: true
+packages:
+  - nginx
+  - htop
+users:
+  - name: student
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+Screenshot
+![](Screenshot_20 ![](Screenshot_24
+
+Launching a Multipass VM with Cloud-Init
+multipass launch --name my-cloud-vm --cloud-init cloud-init.yaml
+Verifying Nginx Installation
+multipass shell my-cloud-vm
+systemctl status nginx
+Screenshot
+![](Screenshot_19
+
+Part 3: Exploring LXD
+Installing and Initializing LXD
+sudo apt update
+sudo apt install -y lxd
+Creating container
+lxc launch ubuntu:20.04 my-container
+lxc list
+lxc exec my-container -- bash
+lxc stop my-container
+lxc delete my-container
+Screenshot
+![](Screenshot_21
+
+Part 4: Working with Docker
+Installing Docker
+Installing and Initializing LXD
+Installing and Initializing LXD
+sudo apt update
+sudo apt install -y docker.io
+sudo systemctl enable --now docker
+Creating a Simple Dockerfile
+Installing and Initializing LXD
+FROM ubuntu:20.04
+RUN apt update && apt install -y nginx
+CMD ["nginx", "-g", "daemon off;"]
+Screenshot
+![](Screenshot_22
+
+Part 5: Working with Snaps
+Installing Snapcraft
+sudo snap install snapcraft --classic
+Packaging a Simple App into a Snap
+Created a snapcraft.yaml file:
+name: my-snap
+base: core20
+version: '1.0'
+summaries: My first snap
+architectures: [amd64]
+apps:
+  my-app:
+    command: echo "Hello, Snap!"
+Screenshot
